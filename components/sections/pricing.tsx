@@ -73,6 +73,119 @@ export function Pricing() {
         ))}
       </div>
 
+      <div className="mt-10 flex flex-col items-center gap-6">
+        <div className="w-full max-w-5xl grid gap-6 md:grid-cols-2">
+          <Card className="relative p-7 rounded-lg border border-cyan-400/60 bg-slate-900/80 shadow-[0_0_0_1px_rgba(34,211,238,0.35),0_16px_36px_rgba(34,211,238,0.2)]">
+            <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+              <div>
+                <div className="inline-flex items-center rounded-full border border-cyan-400/40 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-200">
+                  Producto estrella
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-slate-100">
+                  WhatsApp Automático
+                </h3>
+                <p className="mt-2 text-3xl font-bold text-slate-100">150k</p>
+                <p className="mt-2 text-sm text-slate-300/80">
+                  Sin costos mensuales. Entrega rapida.
+                </p>
+              </div>
+
+              <div className="text-left md:text-right">
+                <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                  Sin mensualidad
+                </p>
+              </div>
+            </div>
+
+            <ul className="mt-6 grid gap-3 text-sm text-slate-300/80">
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Mensaje de bienvenida automatico
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Mensaje de ausencia automatico
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Respuestas rapidas configuradas (menu, horario, ubicacion,
+                precios)
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Catalogo configurado (si aplica)
+              </li>
+            </ul>
+
+            <div className="mt-6">
+              <Button asChild className="w-full">
+                <Link
+                  href={`${sitePricing.whatsappBaseUrl}WhatsApp Automático`}
+                >
+                  {sitePricing.buttonText}
+                </Link>
+              </Button>
+            </div>
+          </Card>
+
+            <Card
+              className="relative p-7 rounded-lg border border-slate-800/80 bg-slate-900/60 transition-all duration-300 before:absolute before:inset-0 before:rounded-lg before:border before:border-cyan-400/0 before:opacity-0 before:transition-all before:duration-300 before:pointer-events-none hover:before:border-cyan-400/80 hover:before:opacity-100 hover:-translate-y-1 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.35),0_12px_30px_rgba(34,211,238,0.18)]"
+            >
+            <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+              <div>
+                <div className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-3 py-1 text-xs font-semibold text-slate-200">
+                  Con mensualidad
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-slate-100">
+                  Automatizacion PRO con IA
+                </h3>
+                <p className="mt-2 text-3xl font-bold text-slate-100">
+                  300k - 500k
+                </p>
+                <p className="mt-2 text-sm text-slate-300/80">
+                  Requiere suscripcion mensual segun uso y proveedor.
+                </p>
+              </div>
+
+              <div className="text-left md:text-right">
+                <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                  + mensualidad
+                </p>
+              </div>
+            </div>
+
+            <ul className="mt-6 grid gap-3 text-sm text-slate-300/80">
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Bot con inteligencia artificial
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Responde preguntas complejas
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Automatizacion avanzada
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                Integracion con WhatsApp API (Twilio o Cloud API)
+              </li>
+            </ul>
+
+            <div className="mt-6">
+              <Button asChild variant="outline" className="w-full">
+                <Link
+                  href={`${sitePricing.whatsappBaseUrl}Automatizacion PRO con IA`}
+                >
+                  {sitePricing.buttonText}
+                </Link>
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </div>
+
       <p className="mt-10 text-center text-sm text-slate-400">
         {sitePricing.footerText}
       </p>
